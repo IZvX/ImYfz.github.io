@@ -6,8 +6,21 @@
 body
 {
     background-image: url(./images/background.png); 
-    background-repeat:repeat;
+    background-repeat:repeat 5% 5%;
     height:+500px;
+    animation: stars 32s linear infinite;
+}
+
+@keyframes stars{
+    0%{
+        background-position-y: +00%;
+    }
+    50%{
+        background-position-y: +50%;
+    }
+    100%{
+        background-position-y: +100%;
+    }
 }
 
 .purpleunderlinehover
@@ -56,16 +69,78 @@ body
 
 .semi-transparent-background-number2-with-15corner
 {
-    background-color: rgba(29, 26, 38, 0.735);
+    
+    background-color: rgba(29, 26, 38, 0.274);
     border-radius: 15px;
     border-image: 
     linear-gradient(
       to bottom, 
-      blueviolet, 
-      rgba(0, 0, 0, 0)
+      rgb(255, 0, 200),
+      blueviolet,
+      blueviolet,
+      blueviolet
     ) 1 100%;
+    animation: gradient 1s linear infinite;
     border-width: 5px;
     border-style: solid;
+    backdrop-filter: blur(4px);
+
+}
+
+@keyframes gradient {
+	0% {
+        border-image: 
+        linear-gradient(
+          to bottom, 
+          rgb(255, 0, 200),
+          blueviolet,
+          blueviolet,
+          blueviolet
+        ) 1 100%;
+	}
+    25% {
+        border-image: 
+        linear-gradient(
+          to bottom, 
+          blueviolet,
+          rgb(255, 0, 200),
+          blueviolet,
+          blueviolet,
+
+        ) 1 100%;
+	}
+	50% {
+        border-image: 
+        linear-gradient(
+          to bottom, 
+          blueviolet,
+          blueviolet,
+          rgb(255, 0, 200),
+          blueviolet,
+
+        ) 1 100%;
+	}
+	75% {
+        border-image: 
+        linear-gradient(
+          to bottom, 
+          blueviolet,
+          blueviolet,
+          rgb(255, 0, 200),
+          blueviolet
+
+        ) 1 100%;
+	}
+    100% {
+        border-image: 
+        linear-gradient(
+          to bottom, 
+          blueviolet,
+          blueviolet,
+          blueviolet,
+          rgb(255, 0, 200)
+        ) 1 100%;
+	}
 }
 .purple-gray-background{
     background-color: rgba(53, 51, 61);
