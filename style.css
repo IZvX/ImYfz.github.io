@@ -1,3 +1,129 @@
-body{
-    background-color: darkslategray;
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
+*{
+    font-family: 'Mukta', sans-serif;
+}
+body
+{
+    background-image: url(./images/background.png); 
+    background-repeat:repeat;
+    height:+500px;
+}
+
+.purpleunderlinehover
+{
+    transition-duration: 0.15s;
+    color: blueviolet; text-decoration-color: rgba(137, 43, 226, 0.25);
+}
+
+.purpleunderlinehover:hover
+{
+    transition-duration: 0.15s;
+    color: blueviolet; text-decoration-color: rgba(137, 43, 226, 1);
+}
+
+.purpleHeader{
+    color: blueviolet;
+}
+
+.semi-transparent-background-with-15corner
+{
+    background-color: rgba(53, 51, 61, 0.178);
+    border-radius: 0px;
+    border-image: 
+    linear-gradient(
+      to bottom, 
+      blueviolet, 
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+    border-width: 5px;
+    border-style: solid;
+}
+
+.semi-transparent-background-number2-with-0corner
+{
+    background-color: rgba(29, 26, 38, 0.735);
+    border-radius: 0px;
+    border-image: 
+    linear-gradient(
+      to bottom, 
+      blueviolet, 
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+    border-width: 5px;
+    border-style: solid;
+}
+
+.semi-transparent-background-number2-with-15corner
+{
+    background-color: rgba(29, 26, 38, 0.735);
+    border-radius: 15px;
+    border-image: 
+    linear-gradient(
+      to bottom, 
+      blueviolet, 
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+    border-width: 5px;
+    border-style: solid;
+}
+.purple-gray-background{
+    background-color: rgba(53, 51, 61);
+}
+
+.purple-button{
+    background-color: blueviolet;
+    border-color: blueviolet;
+}
+
+.purple-button:hover{
+    background-color: rgb(151, 73, 223);
+    border-color: blueviolet;
+}
+
+.white-text{
+    color: white;
+}
+
+.navbar-custom-color
+{
+    background-color: rgba(53, 51, 61, 0.178);
+}
+
+.center-me{
+    position: absolute;
+    top: 50%;
+    transform: translate(10%, -70%);
+}
+
+.font-size-24{
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.movemedown{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.purpleactive{
+    transition-duration: 0.15s;
+    color:rgb(191, 0, 255);
+    text-decoration: solid;
+    text-decoration-color: rgba(191, 0, 255, 0);
+    font-weight: 1000;
+    font-size: 16px;
+}
+
+.purpleactive:hover{
+    transition-duration: 0.15s;
+    color:rgb(255, 79, 205);
+    font-weight: 1000;
+    font-size: 16px;
+}
+
+.very-very-transparent-background
+{
+    background-color: rgba(255, 255, 255, 0);
 }
