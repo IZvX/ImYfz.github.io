@@ -185,6 +185,7 @@ body
 .purpleactive{
     transition-duration: 0.15s;
     color:rgb(191, 0, 255);
+    fill: rgb(191, 0, 255);
     text-decoration: solid;
     text-decoration-color: rgba(191, 0, 255, 0);
     font-weight: 1000;
@@ -194,6 +195,7 @@ body
 .purpleactive:hover{
     transition-duration: 0.15s;
     color:rgb(255, 79, 205);
+    fill:rgb(255, 79, 205);
     font-weight: 1000;
     font-size: 16px;
 }
