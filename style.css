@@ -6,7 +6,8 @@
     --primary : #02735E;
     --secondary : #025959;
     --secondaryalpha : #02595900;
-    --background : #012E40;
+    --background : #00362b;
+    --backgroundalpha : #00362b53;
     --gradient : #011526;
     --gradientalpha25 : #01152650;
   }
@@ -16,18 +17,23 @@
 }
 body, html {
     height: 100%;
+    background-size: 120%;
     background-image: url(./images/bg2.jpg);
-    animation: stars 3s linear infinite;
+    animation: stars 16s linear infinite;
     
   }
 .image {
     
     backdrop-filter: blur(6px);
-    height: 100%;
+    height:100%;  
     width: 100%;
-
   }
-  
+  .image1 {
+    
+    backdrop-filter: blur(6px);
+    height: fit-content;
+    
+  }
   .navbar{
     position: absolute !important;
     top: 0 !important;
@@ -66,6 +72,27 @@ body, html {
     color: var(--primary);
 }
 
+.purpleHeaderanimation {
+    --color1 : #00ff88;
+    --color2 : #02735E;
+    background: linear-gradient(to right, #02735E 20%, #00ff88 40%, #00ff88 60%, #02735E 80%);
+    background-size: 200% auto;
+    
+    color: #000;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    animation: shine 1s linear infinite;
+
+  }
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+
 .iconColor{
     fill:var(--primary);
     transition: all .1s linear; 
@@ -77,17 +104,20 @@ body, html {
     transform: scale(1.1); 
 }
 
+.sharp-corner{
+    border-radius: 0;
+}
 
 .semi-transparent-background-with-15corner
 {
     background-color: rgba(53, 51, 61, 0.178);
-    border-radius: 0px;
+    border-radius: 15px;
     border-image: 
     linear-gradient(
       to bottom, 
       var(--primary), 
       rgba(0, 0, 0, 0)
-    ) 1 100%;
+    ) 1 6;
     border-width: 5px;
     border-style: solid;
 }
@@ -110,12 +140,12 @@ body, html {
 .semi-transparent-background-number2-with-15corner
 {
     
-    background-color: rgba(29, 26, 38, 0.274);
+    background-color: rgba(14, 20, 16, 0.62);
     border-radius: 15px;
     border-image: 
     linear-gradient(
       to bottom, 
-      #038C65,
+      #00ff88,
       #02735E,
       #02735E,
       #02735E
@@ -132,7 +162,7 @@ body, html {
         border-image: 
         linear-gradient(
           to bottom, 
-          #038C65,
+          #00ff88,
           #02735E,
           #02735E,
           #02735E
@@ -143,7 +173,7 @@ body, html {
         linear-gradient(
           to bottom, 
           #02735E,
-          #038C65,
+          #00ff88,
           #02735E,
           #02735E,
 
@@ -155,7 +185,7 @@ body, html {
           to bottom, 
           #02735E,
           #02735E,
-          #038C65,
+          #00ff88,
           #02735E,
 
         ) 1 100%;
@@ -166,8 +196,8 @@ body, html {
           to bottom, 
           #02735E,
           #02735E,
-          #038C65,
-          #02735E
+          #02735E,
+          #00ff88
 
         ) 1 100%;
 	}
@@ -178,12 +208,17 @@ body, html {
           #02735E,
           #02735E,
           #02735E,
-          #038C65
+          #02735E
         ) 1 100%;
 	}
 }
+.purple-gray-background-transparent{
+    background-color: var(--background);
+    backdrop-filter: blur(5px);
+}
+
 .purple-gray-background{
-    background-color: rgba(53, 51, 61);
+    background-color: var(--background);
 }
 
 .purple-button{
