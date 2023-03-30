@@ -49,7 +49,7 @@
             <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarCollapse">
               <ul class="navbar-nav" style="align-items: center; display: inline;" ">
                           <li class=" nav-item" style="display: inline;">
-                <a class="navbar-text purpleactive" href="https://github.com/IZvX">
+                <a class="navbar-text purpleactive" target="_blank" href="https://github.com/IZvX">
                   <svg height="32px" width="32px" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 496 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                     <path
@@ -58,7 +58,7 @@
                 </a>
                 </li>
                 <li class="nav-item" style="display: inline;">
-                  <a class="navbar-text purpleactive" href="https://discordapp.com/users/563036428146311173/">
+                  <a class="navbar-text purpleactive" target="_blank" href="https://discordapp.com/users/563036428146311173/">
                     <svg height="32px" width="32px" xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 640 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                       <path
@@ -67,7 +67,7 @@
                   </a>
                 </li>
                 <li class="nav-item" style="display: inline;">
-                  <a class="navbar-text purpleactive" href="https://www.youtube.com/channel/UCO2cx2KcF98qcWAQsKvVYwA">
+                  <a class="navbar-text purpleactive" target="_blank" href="https://www.youtube.com/channel/UCO2cx2KcF98qcWAQsKvVYwA">
                     <svg height="32px" width="32px" xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 576 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                       <path
@@ -76,7 +76,7 @@
                   </a>
                 </li>
                 <li class="nav-item" style="display: inline;">
-                  <a class="navbar-text purpleactive" href="https://zvx.itch.io/">
+                  <a class="navbar-text purpleactive" target="_blank" href="https://zvx.itch.io/">
                     <svg height="32px" width="32px" xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                       <path
@@ -106,7 +106,7 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="https://img.itch.zone/aW1nLzcwNTAwNjkucG5n/315x250%23c/qvLF%2FS.png" class="d-block w-100"
+            <img src="https://img.itch.zone/aW1nLzk3MTY3MzgucG5n/315x250%23c/xOXPBT.png" class="d-block w-100"
               alt="...">
           </div>
         </div>
@@ -118,10 +118,10 @@
         <dd class="col-sm-9">Game</dd>
         <dt class="col-sm-3 purpleHeader">Project Title</dt>
         <dd class="col-sm-9"><a class="link-info link-offset-2 purpleunderlinehover fa fa-bold growOnHover3"
-            style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" href="# ">BananOs</a></dd>
+            style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" href="https://zvx.itch.io/asapos">A.S.A.P.O.S ( A Shitty Ass Piece Of Shit</a></dd>
 
         <dt class="col-sm-3 purpleHeader">Time spent:</dt>
-        <dd class="col-sm-9">3 Days</dd>
+        <dd class="col-sm-9">16 Hours</dd>
 
         <dt class="col-sm-3 text-truncate purpleHeader">Difficulty</dt>
         <dd class="col-sm-9">Challenging</dd>
@@ -132,12 +132,6 @@
             <dt class="col-sm-4">
               <img src="../images/Unity.svg" height="24" width="24" style="color: rgba(0, 0, 0, 0);">
               Unity
-            </dt>
-          </dl>
-          <dl class="row">
-            <dt class="col-sm-4">
-              <img src="../images/paint.png" height="24" width="24" style="color: rgba(0, 0, 0, 0);">
-              Microsoft Paint
             </dt>
           </dl>
         </dd>
@@ -168,8 +162,7 @@
             <div class="card semi-transparent-background-with-15corner mb-3">
               <div class="card-header">CSharp</div>
               <div class="card-body">
-                <pre><code style="background-color: #00271f88;" class="hljs language-csharp">// Set velocity based on input values and speed
-rb.velocity = new Vector2(speed * Input.GetAxisRaw("Horizontal"), speed * Input.GetAxisRaw("Vertical"));</code></pre>
+                <pre><code style="background-color: #00271f88;" class="hljs language-csharp"></code></pre>
               </div>
             </div>
           </li>
@@ -182,66 +175,7 @@ rb.velocity = new Vector2(speed * Input.GetAxisRaw("Horizontal"), speed * Input.
             <div class="card semi-transparent-background-with-15corner mb-3">
               <div class="card-header">CSharp</div>
               <div class="card-body">
-                <pre><code style="background-color: #00271f88;" class="hljs language-csharp">// Cast a ray from the player's position towards the mouse position to detect any colliders in range.
-// If a collider is found and has a "Enemy" tag, check for player inputs.
-RaycastHit2D hit = Physics2D.Raycast(transform.position, (cam.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized, maxDistance);
-if (hit.collider != null && hit.transform.CompareTag("Enemy"))
-{
-    // If the left mouse button is pressed, check that the player isn't performing a fear takedown and the hitTimer has elapsed.
-    if (Input.GetMouseButtonDown(0) && !fearTakedownBool && hitTimer >= hitDelay)
-    {
-        // Reset the hitTimer and choose a random number for the attack variant.
-        hitTimer = 0.0f;
-        int attackVariant = Random.Range(1, 5);
-
-        // Trigger the "Hit" animation and play a sound effect.
-        animator.SetTrigger("Hit");
-        animator.SetInteger("Variant", attackVariant);
-        source.PlayOneShot(hit1);
-
-        // Increase the combo counter and update the score based on the current combo.
-        Combo++;
-        SpecialAttackCounter++;
-        score += Combo * 10;
-
-        // Update the combo meter text and animation.
-        comboText.text = "x" + Combo.ToString();
-        comboMeterAnimator.SetTrigger("ComboUp");
-
-        // Deal damage to the enemy and move the player towards the enemy using DOTween.
-        hit.collider.transform.GetComponent<EnemyHealth>().takeDamage(1f, false, 3f, transform.position);
-        float moveDuration = 1f / FreeflowSpeed;
-        transform.DOLocalMove(hit.transform.position + (hit.transform.position - transform.position).normalized * 1.2f, moveDuration);
-
-        // Print the name of the collider for debugging purposes.
-        MonoBehaviour.print(hit.collider.name);
-    }
-
-    // If the middle mouse button is pressed, check that the player isn't performing a fear takedown and the stunTimer has elapsed.
-    if (Input.GetMouseButtonDown(2) && !fearTakedownBool && stunTimer >= stunDelay)
-    {
-        // Reset the stunTimer and choose a random number for the attack variant.
-        stunTimer = 0.0f;
-        int attackVariant = Random.Range(1, 5);
-
-        // Trigger the "Hit" animation and play a sound effect.
-        animator.SetTrigger("Hit");
-        animator.SetInteger("Variant", attackVariant);
-        source.PlayOneShot(hit1);
-
-        // Update the combo meter text and animation.
-        comboText.text = "x" + Combo.ToString();
-        comboMeterAnimator.SetTrigger("ComboUp");
-
-        // Stun the enemy and move the player towards the enemy using DOTween.
-        hit.collider.transform.GetComponent<EnemyHealth>().stunEnemy();
-        float moveDuration = 1f / FreeflowSpeed;
-        transform.DOLocalMove(hit.transform.position + (hit.transform.position - transform.position).normalized * 1.2f, moveDuration);
-
-        // Print the name of the collider for debugging purposes.
-        MonoBehaviour.print(hit.collider.name);
-    }
-}</code></pre>
+                <pre><code style="background-color: #00271f88;" class="hljs language-csharp"></code></pre>
               </div>
             </div>
           </li>
@@ -256,65 +190,7 @@ if (hit.collider != null && hit.transform.CompareTag("Enemy"))
             <div class="card semi-transparent-background-with-15corner mb-3">
               <div class="card-header">CSharp</div>
               <div class="card-body">
-                <pre><code style="background-color: #00271f88;" class="hljs language-csharp">Transform[] enemies = enemys.ToArray(); // get a copy of the list of enemies
-int index = 0;
-foreach (Transform stunnedEnemy in stunnedEnemys) // loop through the stunned enemies
-{
-    if (stunnedEnemy == null)
-    {
-        enemys.Remove(stunnedEnemy); // if an enemy is null, remove it from the list
-    }
-    else
-    {
-        stunnedEnemy.GetComponent<EnemyHealth>().hideCounter(); // hide the stun counter
-        if (!stunnedEnemy.GetComponent<EnemyHealth>().stunned)
-        {
-            stunnedEnemys.Remove(stunnedEnemy); // if the enemy is not stunned, remove it from the stunned enemies list
-            enemys.Add(stunnedEnemy); // add the enemy back to the enemies list
-        }
-    }
-}
-foreach (Transform enemy in enemys) // loop through the enemies
-{
-    if (enemy == null)
-    {
-        enemys.Remove(enemy); // if an enemy is null, remove it from the list
-    }
-    else if (enemy.GetComponent<EnemyHealth>().stunned)
-    {
-        stunnedEnemys.Add(enemy); // if the enemy is stunned, add it to the stunned enemies list
-        enemys.Remove(enemy); // remove the enemy from the enemies list
-    }
-}
-timer += Time.deltaTime; // increase the timer
-if (state == "Selecting") // if the state is Selecting
-{
-    index = Random.Range(0, enemies.Length); // select a random enemy from the list
-    duringAttack = true;
-    Attacker = enemies[index]; // set the Attacker to the selected enemy
-    if (Attacker.GetComponent<EnemyHealth>().stunned)
-        Random.Range(0, enemies.Length); // if the Attacker is stunned, select another random enemy
-    // print out debug information
-    Debug.Log("selectAttacker(int: " + enemies[index].name + " string: " + index.ToString() + ")");
-    if (timer >= 1f / speed + 0.5f)
-    {
-        timer = 0f;
-        state = "Attacking"; // change the state to Attacking
-    }
-}
-if (state == "Attacking") // if the state is Attacking
-{
-    // print out debug information
-    Debug.Log("SendAttacker()");
-    enemies[index].GetComponent<EnemyHealth>().showCounter(); // show the attack counter for the Attacker
-    enemies[index].DOLocalMove(player.position, 1f / speed); // move the Attacker towards the player
-    if (timer >= 1f / speed + 0.1f)
-    {
-        timer = 0f;
-        state = "Retreating"; // change the state to Retreating
-        DamagePlayer(Random.Range(1f, 3f)); // damage the player
-    }
-}</code></pre>
+                <pre><code style="background-color: #00271f88;" class="hljs language-csharp"></code></pre>
               </div>
             </div>
           </li>
@@ -327,64 +203,7 @@ if (state == "Attacking") // if the state is Attacking
             <div class="card semi-transparent-background-with-15corner mb-3">
               <div class="card-header">CSharp</div>
               <div class="card-body">
-                <pre><code style="background-color: #00271f88;" class="hljs language-csharp">if (this.fearTakedownBool) {
-    // If fear takedown is active, set the slow motion post-processing effect and disable the normal one
-    this.slowMoPostP.gameObject.SetActive(true);
-    this.normalPostP.gameObject.SetActive(false);
-    // Set the time scale to 0.2f to create a slow motion effect
-    Time.timeScale = 0.2f;
-
-    // If left mouse button is clicked and fear takedown list count is less than or equal to 5, and the mouse click hits an enemy object
-    if (Input.GetMouseButtonDown(0) && this.fearTakedownList.Count <= 5 && 
-        (Object) raycastHit2D.collider != (Object) null && 
-        raycastHit2D.transform.CompareTag("Enemy")) {
-        // Add the enemy object to the fear takedown list
-        this.fearTakedownList.Add(raycastHit2D.transform);
-        // Print a message indicating that the enemy object is added to the list
-        MonoBehaviour.print((object)("added " + raycastHit2D.collider.name));
-    }
-
-    // If the fear takedown key is not pressed, return and do nothing
-    if (!Input.GetKeyDown(this.FearTakedownKey)) {
-        return;
-    }
-
-    // Reset the special attack counter and enable the line renderer
-    this.SpecialAttackCounter = 0;
-    this.line.enabled = true;
-
-    // Loop through the fear takedown list, starting from the second item, and perform the fear takedown on each enemy object
-    for (int index = 1; index < this.fearTakedownList.Count; ++index) {
-        // Move the player character to the enemy object's position using the DOTween library
-        this.transform.DOLocalMove(this.fearTakedownList.ToArray()[index].position, 0.5f);
-        // Trigger the explosion animation of the enemy object
-        this.fearTakedownList.ToArray()[index].GetComponent<EnemyHealth>().boom();
-        // Print a message indicating that the enemy object is hit by the fear takedown
-        MonoBehaviour.print((object)("Hit this guy :" + this.fearTakedownList.ToArray()[index].name));
-    }
-
-    // Set the fear takedown flag to false to indicate that the fear takedown is completed
-    this.fearTakedownBool = false;
-
-} else {
-    // If fear takedown is not active, set the normal post-processing effect and disable the slow motion one
-    this.slowMoPostP.gameObject.SetActive(false);
-    this.normalPostP.gameObject.SetActive(true);
-
-    // If the fear takedown key is pressed and the special attack counter is greater than or equal to 12
-    if (Input.GetKeyDown(this.FearTakedownKey) && this.SpecialAttackCounter >= 12) {
-        // Set the fear takedown flag to true to start the fear takedown
-        this.fearTakedownBool = true;
-        // Print a message indicating that the fear takedown is started
-        MonoBehaviour.print((object)"started fear takedown");
-    }
-
-    // Set the time scale to 1f to return to normal speed
-    Time.timeScale = 1f;
-    // Clear the fear takedown list
-    this.fearTakedownList.Clear();
-}
-</code></pre>
+                <pre><code style="background-color: #00271f88;" class="hljs language-csharp"></code></pre>
               </div>
             </div>
           </li>
@@ -492,5 +311,6 @@ if (state == "Attacking") // if the state is Attacking
       </div>
     </div>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
