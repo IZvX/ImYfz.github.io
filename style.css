@@ -1,43 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
 
+:root {
+    --text : #ffffff;
+    --active : #038C65;
+    --primary : #02735E;
+    --secondary : #025959;
+    --secondaryalpha : #02595900;
+    --background : #012E40;
+    --gradient : #011526;
+    --gradientalpha25 : #01152650;
+  }
+
 *{
     font-family: 'Mukta', sans-serif;
 }
-body
-{
-    background-image: url(./images/background.png); 
-    background-repeat:repeat 5% 5%;
-    height:+500px;
-    animation: stars 32s linear infinite;
-}
+body, html {
+    height: 100%;
+    background-image: url(./images/bg2.jpg);
+    animation: stars 3s linear infinite;
+    
+  }
+.image {
+    
+    backdrop-filter: blur(6px);
+    height: 100%;
+    width: 100%;
+
+  }
+  
+  .navbar{
+    position: absolute !important;
+    top: 0 !important;
+  }
 
 @keyframes stars{
     0%{
-        background-position-y: +00%;
+        background-position: 0% center;
+
     }
     50%{
-        background-position-y: +50%;
+        background-position: 50% center;
+
     }
     100%{
-        background-position-y: +100%;
+        background-position: 100% center;
+
     }
 }
 
 .purpleunderlinehover
 {
     transition-duration: 0.15s;
-    color: blueviolet; text-decoration-color: rgba(137, 43, 226, 0.25);
+    color: var(--primary); text-decoration-color: var(--secondaryalpha);
 }
 
 .purpleunderlinehover:hover
 {
     transition-duration: 0.15s;
-    color: blueviolet; text-decoration-color: rgba(137, 43, 226, 1);
+    color: var(--primary); text-decoration-color: var(--secondary);
+    transition: all .1s linear; 
+    transform: scale(1.1); 
 }
 
 .purpleHeader{
-    color: blueviolet;
+    color: var(--primary);
 }
+
+.iconColor{
+    fill:var(--primary);
+    transition: all .1s linear; 
+}
+
+.iconColor:hover{
+    fill:var(--active);
+    transition: all .1s linear; 
+    transform: scale(1.1); 
+}
+
 
 .semi-transparent-background-with-15corner
 {
@@ -46,7 +85,7 @@ body
     border-image: 
     linear-gradient(
       to bottom, 
-      blueviolet, 
+      var(--primary), 
       rgba(0, 0, 0, 0)
     ) 1 100%;
     border-width: 5px;
@@ -60,12 +99,13 @@ body
     border-image: 
     linear-gradient(
       to bottom, 
-      blueviolet, 
+      var(--primary), 
       rgba(0, 0, 0, 0)
     ) 1 100%;
     border-width: 5px;
     border-style: solid;
 }
+
 
 .semi-transparent-background-number2-with-15corner
 {
@@ -75,10 +115,10 @@ body
     border-image: 
     linear-gradient(
       to bottom, 
-      rgb(255, 0, 200),
-      blueviolet,
-      blueviolet,
-      blueviolet
+      #038C65,
+      #02735E,
+      #02735E,
+      #02735E
     ) 1 100%;
     animation: gradient 1s linear infinite;
     border-width: 5px;
@@ -92,20 +132,20 @@ body
         border-image: 
         linear-gradient(
           to bottom, 
-          rgb(255, 0, 200),
-          blueviolet,
-          blueviolet,
-          blueviolet
+          #038C65,
+          #02735E,
+          #02735E,
+          #02735E
         ) 1 100%;
 	}
     25% {
         border-image: 
         linear-gradient(
           to bottom, 
-          blueviolet,
-          rgb(255, 0, 200),
-          blueviolet,
-          blueviolet,
+          #02735E,
+          #038C65,
+          #02735E,
+          #02735E,
 
         ) 1 100%;
 	}
@@ -113,10 +153,10 @@ body
         border-image: 
         linear-gradient(
           to bottom, 
-          blueviolet,
-          blueviolet,
-          rgb(255, 0, 200),
-          blueviolet,
+          #02735E,
+          #02735E,
+          #038C65,
+          #02735E,
 
         ) 1 100%;
 	}
@@ -124,10 +164,10 @@ body
         border-image: 
         linear-gradient(
           to bottom, 
-          blueviolet,
-          blueviolet,
-          rgb(255, 0, 200),
-          blueviolet
+          #02735E,
+          #02735E,
+          #038C65,
+          #02735E
 
         ) 1 100%;
 	}
@@ -135,10 +175,10 @@ body
         border-image: 
         linear-gradient(
           to bottom, 
-          blueviolet,
-          blueviolet,
-          blueviolet,
-          rgb(255, 0, 200)
+          #02735E,
+          #02735E,
+          #02735E,
+          #038C65
         ) 1 100%;
 	}
 }
@@ -147,13 +187,15 @@ body
 }
 
 .purple-button{
-    background-color: blueviolet;
-    border-color: blueviolet;
+    background-color: var(--primary);
+    border-color: var(--primary);
 }
 
 .purple-button:hover{
-    background-color: rgb(151, 73, 223);
-    border-color: blueviolet;
+    background-color: var(--active);
+    border-color: var(--primary);
+    transition: all .1s linear; 
+    transform: scale(1.1); 
 }
 
 .white-text{
@@ -162,13 +204,13 @@ body
 
 .navbar-custom-color
 {
-    background-color: rgba(53, 51, 61, 0.178);
+    background-color: var(--gradientalpha25);
 }
 
 .center-me{
-    position: absolute;
+    position: relative;
     top: 50%;
-    transform: translate(10%, -70%);
+    transform: translateY(-30%);
 }
 
 .font-size-24{
@@ -184,8 +226,8 @@ body
 
 .purpleactive{
     transition-duration: 0.15s;
-    color:rgb(191, 0, 255);
-    fill: rgb(191, 0, 255);
+    color:var(--primary);
+    fill: var(--primary);
     text-decoration: solid;
     text-decoration-color: rgba(191, 0, 255, 0);
     font-weight: 1000;
@@ -194,10 +236,45 @@ body
 
 .purpleactive:hover{
     transition-duration: 0.15s;
-    color:rgb(255, 79, 205);
-    fill:rgb(255, 79, 205);
+    color:var(--active);
+    fill: var(--active);
     font-weight: 1000;
     font-size: 16px;
+    transition: all .1s linear; 
+    transform: scale(1.1);
+}
+
+.growOnHover{
+    transition: all .1s linear; 
+    transform: scale(1);
+}
+
+.growOnHover:hover{
+    transition: all .1s linear; 
+    transform: scale(1.1);
+    border-bottom: 2px solid;
+}
+
+.growOnHover2 svg{
+    transition: all .1s linear; 
+    transform: scale(1);
+}
+
+.growOnHover2 svg:hover{
+    transition: all .1s linear; 
+    transform: scale(1.2);
+    border-bottom: 2px solid;
+}
+
+.growOnHover3{
+    transition: all .1s linear; 
+    transform: scale(1);
+}
+
+.growOnHover3:hover{
+    transition: all .1s linear; 
+    transform: scale(1.2);
+    font-weight:900;
 }
 
 .very-very-transparent-background
