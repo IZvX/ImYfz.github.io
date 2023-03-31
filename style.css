@@ -233,6 +233,18 @@ body, html {
     transform: scale(1.1); 
 }
 
+.purple-button2{
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.purple-button2:hover{
+    background-color: var(--active);
+    border-color: var(--primary);
+    transition: all .1s linear; 
+    transform: scale(1.05); 
+}
+
 .white-text{
     color: white;
 }
